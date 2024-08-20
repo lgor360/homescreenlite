@@ -44,7 +44,7 @@
     <font id="texticon">homescreenlite ᗢ</font>
     <div class="search">
         <input placeholder="search" type="text" id="sinput">
-        <button id="sbutton" onclick="Search()">→</button>
+        <button id="sbutton" onclick="SearchEngine()">→</button>
     </div>
     <div class="t">
         <select name="tselect" id="themes" onchange="SaveSelectValue(this)">
@@ -57,7 +57,7 @@
     <dialog>
         <font>Настройки</font>
         <hr>
-        <font>Search engine.</font>
+        <font>Поисковая система:</font>
         <select name="sselect" id="searchselect" onchange="SaveSelectValue(this)">
             <option value="google">Google</option>
             <option value="bing">Bing</option>
@@ -73,7 +73,7 @@
         SSelect.value = LoadSelectValue(SSelect);
         let TSelect = document.querySelector("[name='tselect']");
         TSelect.value = LoadSelectValue(TSelect);
-        Themes()
+        Themes();
         var input = document.getElementById("sinput");
         input.addEventListener("keyup", function(event) {
             if (event.keyCode === 13) {
@@ -82,12 +82,12 @@
                 document.getElementById("sbutton").click();
             }
         });
-        var dialog = document.querySelector('dialog')
+        var dialog = document.querySelector('dialog');
         document.querySelector('#dialogopen').onclick = function () {
-            dialog.show()
+            dialog.show();
         }
         document.querySelector('#dialogclose').onclick = function () {
-            dialog.close() 
+            dialog.close();
         }
 
         function SaveSelectValue(el) {
@@ -96,14 +96,25 @@
         function LoadSelectValue(el) {
             return localStorage.getItem(el.name);
         }
-        function Search() {
+        function SearchEngine() {
             var NSS = document.getElementById("searchselect").value;
-            if (NSS === "google") var SSystem = 'https://www.google.com/search?q=';
-            else if (NSS === "bing") var SSystem = 'https://www.bing.com/search?q=';
-            else if (NSS === "ya") var SSystem = 'https://yandex.ru/search/?text=';
-            else if (NSS === "ddg") var SSystem = 'https://duckduckgo.com/?q=';
-            else document.getElementById("dialogopen").click();
-            
+            if (NSS === "google") {
+                var SSystem = 'https://www.google.com/search?q=';
+                Search(SSystem);
+            } else if (NSS === "bing") {
+                var SSystem = 'https://www.bing.com/search?q=';
+                Search(SSystem);
+            } else if (NSS === "ya") {
+                var SSystem = 'https://yandex.ru/search/?text=';
+                Search(SSystem);
+            } else if (NSS === "ddg") {
+                var SSystem = 'https://duckduckgo.com/?q=';
+                Search(SSystem);
+            } else {
+                document.getElementById("dialogopen").click();
+            }
+        }  
+        function Search(SSystem) {
             var sInput = document.getElementById("sinput").value;
             console.log("я вытащил поле");
             let sNeed = SSystem += sInput;
