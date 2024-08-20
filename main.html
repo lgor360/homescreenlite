@@ -74,15 +74,15 @@
         }
         function Search() {
             var NSS = document.getElementById("searchselect").value;
-            alert(NSS);
-            if (NSS.value == "bing") var SSystem = 'https://www.bing.com/search?q=';
+            if (NSS.value == "google") var SSystem = 'https://www.google.com/search?q=';
+            else if (NSS.value == "bing") var SSystem = 'https://www.bing.com/search?q=';
             else if (NSS.value == "ya") var SSystem = 'https://yandex.ru/search/?text=';
             else if (NSS.value == "ddg") var SSystem = 'https://duckduckgo.com/?q=';
-            else alert("извини, но ты не выбрал поисковую систему!");
+            else console.log("поисковая система выбранна");
             
             var sInput = document.getElementById("sinput");
             console.log("я вытащил поле");
-            let sNeed = SSystem.value += sInput.value;
+            let sNeed = NSS.value += sInput.value;
             console.log("я прибавил гугл и запрос");
             location.href = sNeed.value;
             console.log("перенаправляю...");
