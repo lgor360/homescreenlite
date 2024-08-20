@@ -44,12 +44,6 @@
     <div class="search">
         <input placeholder="search" type="text" id="sinput">
         <button id="sbutton" onclick="Search()">→</button>
-        <select name="sselect" id="searchselect" onchange="SaveSelectValue(this)">
-            <option value="google">Google</option>
-            <option value="bing">Bing</option>
-            <option value="ya">Яндекс</option>
-            <option value="ddg">DuckDuckGo</option>
-        </select>
     </div>
     <div class="t">
         <select name="tselect" id="themes" onchange="SaveSelectValue(this)">
@@ -60,6 +54,16 @@
     </div>
     <button id="dialogopen">Настройки</button>
     <dialog>
+        <font>Настройки</font>
+        <hr>
+        <font>Поисковая система.</font>
+        <select name="sselect" id="searchselect" onchange="SaveSelectValue(this)">
+            <option value="google">Google</option>
+            <option value="bing">Bing</option>
+            <option value="ya">Яндекс</option>
+            <option value="ddg">DuckDuckGo</option>
+        </select>
+        <hr>
         <button id="dialogclose">Закрыть окно</button>
     </dialog>
     </center>
