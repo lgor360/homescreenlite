@@ -73,7 +73,7 @@
             return localStorage.getItem(el.name);
         }
         function Search() {
-            const sImput = document.getElementById('mm');
+            const sImput = mm.value;
             let sNeed = 'https://yandex.ru/search/?text=' + sImput;
             location.href = sNeed;
         }
