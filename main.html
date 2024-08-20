@@ -79,14 +79,12 @@
             else if (NSS === "ya") var SSystem = 'https://yandex.ru/search/?text=';
             else if (NSS === "ddg") var SSystem = 'https://duckduckgo.com/?q=';
             else console.log(NSS);
-            alert(SSystem);
             
             var sInput = document.getElementById("sinput").value;
             console.log("я вытащил поле");
-            let sNeed = SSystem += sInput.value;
+            let sNeed = SSystem += sInput;
             console.log("я прибавил гугл и запрос");
             location.href = sNeed;
-            alert(sNeed);
             console.log("перенаправляю...");
         }
     </script>
