@@ -38,7 +38,7 @@
         input, select {
             border-radius: 4px; /* Скругление углов кнопки */
         }
-        .themes {
+        .t {
             top: 100%;
         }
     </style>
@@ -55,12 +55,14 @@
             <option value="ddg">DuckDuckGo</option>
         </select>
     </div>
-    <select name="tselect" id="themes" onchange="SaveSelectValue(this)">
+    <div class="t">
+        <select name="tselect" id="themes" onchange="SaveSelectValue(this)">
             <option value="black">Black</option>
             <option value="red">Red</option>
             <option value="orange">Orange</option>
             <option value="yellow">Yellow</option>
-    </select>
+        </select>
+    </div>
     <script>
         let SSelect = document.querySelector("[name='sselect']");
         SSelect.value = LoadSelectValue(SSelect);
