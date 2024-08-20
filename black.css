@@ -1,9 +1,11 @@
 body {
   background: #3F3F3F;
+  color: #FFFFFF;
 }
 button {
   background: linear-gradient(to bottom, #F7F7F7 0%, #C8C8C8 100%);
+  color: #000000;
 }
-#texticon {
-  color: #FFFFFF;
+input, select {
+  color: #000000;
 }
