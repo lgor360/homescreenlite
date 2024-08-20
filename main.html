@@ -44,7 +44,7 @@
     <font id="texticon">homescreenlite ᗢ</font>
     <div class="search">
         <input placeholder="search" type="text" id="sinput">
-        <button onclick="Search()">→</button>
+        <button id="sbutton" onclick="Search()">→</button>
         <select name="sselect" id="searchselect" onchange="SaveSelectValue(this)">
             <option value="google">Google</option>
             <option value="bing">Bing</option>
@@ -66,6 +66,15 @@
         let TSelect = document.querySelector("[name='tselect']");
         TSelect.value = LoadSelectValue(TSelect);
         Themes()
+        var input = document.getElementById("sinput");
+        input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                console.log("был нажат enter");
+                document.getElementById("sbutton").click();
+            }
+        });
+
         
         function SaveSelectValue(el) {
             localStorage.setItem(el.name, el.value);
