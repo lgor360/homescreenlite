@@ -43,7 +43,7 @@
     <font>homescreenlite ᗢ</font>
     <div class="search">
         <input type="text" id="mm">
-        <button onclick="search()">→</button>
+        <button onclick="Search()">→</button>
         <select name="sselect" id="searchselect" onchange="SaveSelectValue(this)">
             <option value="google">Google</option>
             <option value="bing">Bing</option>
@@ -75,7 +75,7 @@
         function Search() {
             const sImput = document.getElementById('mm');
             let sNeed = 'https://yandex.ru/search/?text=' + sImput;
-            location.replace = sNeed;
+            location.href = sNeed;
         }
     </script>
 </body>
