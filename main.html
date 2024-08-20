@@ -73,27 +73,26 @@
             return localStorage.getItem(el.name);
         }
         function Search() {
-            var e = document.getElementById("sselect");
-            var nss = e.value;
-            if (nss.value = google) {
+            var NSS = document.getElementById("sselect");
+            if (NSS.value = google) {
                 var SSystem = 'https://www.google.com/search?q='
                 console.log("гугл")
             }
-            if (nss.value = bing) {
+            if (NSS.value = bing) {
                 var SSystem = 'https://www.bing.com/search?q='
                 console.log("бинг")
             }
-            if (nss.value = ya) {
+            if (NSS.value = ya) {
                 var SSystem = 'https://yandex.ru/search/?text='
                 console.log("йандекс")
             }
-            if (nss.value = ddg) {
+            if (NSS.value = ddg) {
                 var SSystem = 'https://duckduckgo.com/?q='
                 console.log("утка")
             }
             const sInput = sinput.value;
             console.log("я вытащил поле")
-            let sNeed = SSystem.value + sInput.value;
+            let sNeed = SSystem.value += sInput.value;
             console.log("я прибавил гугл и запрос")
             location.href = sNeed.value;
             console.log("перенаправляю...")
