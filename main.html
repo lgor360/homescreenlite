@@ -58,7 +58,7 @@
             <option value="red">Red</option>
             <option value="orange">Orange</option>
         </select>
-        <button onclick="themes()">Применить тему</button>
+        <button onclick="Themes()">Применить тему</button>
     </div>
     </center>
     <script>
@@ -88,14 +88,14 @@
             location.href = sNeed;
             console.log("перенаправляю...");
         }
-        function loadthemes(color) {
+        function LoadThemes(color) {
             var cssLink = document.createElement('link');
             cssLink.rel = 'stylesheet';
             let tLink = '/homescreenlite/' += color;
             cssLink.href = tLink;
             alert(tLink);
         }
-        function themes() {
+        function Themes() {
             var NT = document.getElementById("themes").value;
             if (NT === "black") loadthemes(black.css);
             else if (NT === "red") loadthemes(red.css);
