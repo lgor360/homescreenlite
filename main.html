@@ -77,19 +77,26 @@
             var nss = e.value;
             if (nss = google) {
                 var SSystem = 'https://www.google.com/search?q='
+                console.log("гугл")
             }
             if (nss = bing) {
                 var SSystem = 'https://www.bing.com/search?q='
+                console.log("бинг")
             }
             if (nss = ya) {
                 var SSystem = 'https://duckduckgo.com/?q='
+                console.log("йандекс")
             }
             if (nss = ddg) {
                 var SSystem = 'https://www.google.com/search?q='
+                console.log("утка")
             }
             const sImput = mm.value;
+            console.log("я вытащил поле")
             let sNeed = SSystem + sImput;
+            console.log("я прибавил гугл и запрос")
             location.href = sNeed;
+            console.log("перенаправляю...")
         }
     </script>
 </body>
