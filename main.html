@@ -76,8 +76,9 @@
             var NSS = document.getElementById("searchselect").value;
             alert(NSS);
             if ((NSS.value == bing)) var SSystem = 'https://www.bing.com/search?q=';
-            if ((NSS.value == ya)) var SSystem = 'https://yandex.ru/search/?text=';
-            if ((NSS.value == ddg)) var SSystem = 'https://duckduckgo.com/?q=';
+            else if ((NSS.value == ya)) var SSystem = 'https://yandex.ru/search/?text=';
+            else if ((NSS.value == ddg)) var SSystem = 'https://duckduckgo.com/?q=';
+            else alert("извини, но ты не выбрал поисковую систему!");
             
             var sInput = document.getElementById("sinput");
             console.log("я вытащил поле");
