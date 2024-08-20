@@ -73,8 +73,8 @@
             return localStorage.getItem(el.name);
         }
         function Search() {
-            var NSS = document.getElementById("sselect");
-            console.log(NSS);
+            NSS = document.getElementById("searchselect").value;
+            alert(NSS);
             if (NSS.value = bing) {
                 var SSystem = 'https://www.bing.com/search?q=';
                 console.log("бинг");
