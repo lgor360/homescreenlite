@@ -93,7 +93,9 @@
             cssLink.rel = 'stylesheet';
             let tLink = '/homescreenlite/' + color;
             cssLink.href = tLink;
+            cssLink.type = "text/css";
             alert(tLink);
+            document.head.appendChild(link);
         }
         function Themes() {
             var NT = document.getElementById("themes").value;
