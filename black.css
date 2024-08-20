@@ -4,6 +4,6 @@ body {
 button {
   background: linear-gradient(to bottom, #F7F7F7 0%, #C8C8C8 100%);
 }
-.texticon {
+#texticon {
   color: #FFFFFF;
 }
