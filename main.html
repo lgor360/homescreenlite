@@ -74,10 +74,10 @@
         }
         function Search() {
             var NSS = document.getElementById("searchselect").value;
-            if (NSS === "google") var SSystem = 'https://www.google.com/search?q=';
-            else if (NSS === "bing") var SSystem = 'https://www.bing.com/search?q=';
-            else if (NSS === "ya") var SSystem = 'https://yandex.ru/search/?text=';
-            else if (NSS === "ddg") var SSystem = 'https://duckduckgo.com/?q=';
+            if (NSS.value === "google") var SSystem = 'https://www.google.com/search?q=';
+            else if (NSS.value === "bing") var SSystem = 'https://www.bing.com/search?q=';
+            else if (NSS.value === "ya") var SSystem = 'https://yandex.ru/search/?text=';
+            else if (NSS.value === "ddg") var SSystem = 'https://duckduckgo.com/?q=';
             else console.log(NSS);
             alert(SSystem);
             
