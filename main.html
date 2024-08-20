@@ -45,7 +45,7 @@
         <input placeholder="search" type="text" id="sinput">
         <button onclick="Search()">→</button>
         <select name="sselect" id="searchselect" onchange="SaveSelectValue(this)">
-            <option value="google" selected>Google</option>
+            <option value="google">Google</option>
             <option value="bing">Bing</option>
             <option value="ya">Яндекс</option>
             <option value="ddg">DuckDuckGo</option>
@@ -74,10 +74,6 @@
         }
         function Search() {
             var NSS = document.getElementById("sselect");
-            if (NSS.value = google) {
-                var SSystem = 'https://www.google.com/search?q=';
-                console.log("гугл");
-            }
             if (NSS.value = bing) {
                 var SSystem = 'https://www.bing.com/search?q=';
                 console.log("бинг");
