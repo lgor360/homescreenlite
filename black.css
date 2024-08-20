@@ -1,0 +1,6 @@
+body {
+  background: #3F3F3F;
+}
+button {
+  background: linear-gradient(to bottom, #F7F7F7 0%, #C8C8C8 100%);
+}
