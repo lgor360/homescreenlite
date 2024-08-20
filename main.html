@@ -52,5 +52,13 @@
             <option value="ddg">DuckDuckGo</option>
         </select>
     </div>
+    <script>
+        function SaveSelectValue(el) {
+            localStorage.setItem(el.name, el.value);
+        }
+        function LoadSelectValue(el) {
+            return localStorage.getItem(el.name);
+        }
+    </script>
 </body>
 </html>
