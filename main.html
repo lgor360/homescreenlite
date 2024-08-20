@@ -75,27 +75,27 @@
         function Search() {
             var e = document.getElementById("sselect");
             var nss = e.value;
-            if (nss = google) {
+            if (nss.value = google) {
                 var SSystem = 'https://www.google.com/search?q='
                 console.log("гугл")
             }
-            if (nss = bing) {
+            if (nss.value = bing) {
                 var SSystem = 'https://www.bing.com/search?q='
                 console.log("бинг")
             }
-            if (nss = ya) {
+            if (nss.value = ya) {
                 var SSystem = 'https://yandex.ru/search/?text='
                 console.log("йандекс")
             }
-            if (nss = ddg) {
+            if (nss.value = ddg) {
                 var SSystem = 'https://duckduckgo.com/?q='
                 console.log("утка")
             }
             const sImput = mm.value;
             console.log("я вытащил поле")
-            let sNeed = SSystem + sImput;
+            let sNeed = SSystem.value + sImput.value;
             console.log("я прибавил гугл и запрос")
-            location.href = sNeed;
+            location.href = sNeed.value;
             console.log("перенаправляю...")
         }
     </script>
