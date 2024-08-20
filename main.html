@@ -53,6 +53,9 @@
         </select>
     </div>
     <script>
+        let SSelect = document.querySelector("[name='sselect']");
+        SSelect.value = LoadSelectValue(SSelect);
+        
         function SaveSelectValue(el) {
             localStorage.setItem(el.name, el.value);
         }
