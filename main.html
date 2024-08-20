@@ -48,7 +48,7 @@
     <font>homescreenlite ᗢ</font>
     <div class="search">
         <input type="text" id="mm">
-        <button>→</button>
+        <button onclick="search()">→</button>
         <select name="sselect" id="searchselect" onchange="SaveSelectValue(this)">
             <option value="google">Google</option>
             <option value="bing">Bing</option>
@@ -76,6 +76,10 @@
         function LoadSelectValue(el) {
             return localStorage.getItem(el.name);
         }
+        function Search() {
+            const sImput = document.getElementById('mm');
+            let sNeed = 'https://yandex.ru/search/?text=' + sImput;
+            window.location.replace(sNeed);
     </script>
 </body>
 </html>
