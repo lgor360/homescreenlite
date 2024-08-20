@@ -46,13 +46,6 @@
         <input placeholder="search" type="text" id="sinput">
         <button id="sbutton" onclick="SearchEngine()">→</button>
     </div>
-    <div class="t">
-        <select name="tselect" id="themes" onchange="SaveSelectValue(this)">
-            <option value="red">Red</option>
-            <option value="orange">Orange</option>
-        </select>
-        <button onclick="Themes()">Применить тему</button>
-    </div>
     <button id="dialogopen">Настройки</button>
     <dialog>
         <font>Настройки</font>
@@ -63,6 +56,12 @@
             <option value="bing">Bing</option>
             <option value="ya">Яндекс</option>
             <option value="ddg">DuckDuckGo</option>
+        </select>
+        <font>Тема:</font>
+        <hr>
+        <select name="tselect" id="themes" onchange="SaveSelectValue(this)">
+            <option value="red">Красная тема</option>
+            <option value="orange">Оранжевая тема</option>
         </select>
         <hr>
         <button id="dialogclose">Закрыть окно</button>
@@ -88,6 +87,7 @@
         }
         document.querySelector('#dialogclose').onclick = function () {
             dialog.close();
+            Themes();
         }
 
         function SaveSelectValue(el) {
