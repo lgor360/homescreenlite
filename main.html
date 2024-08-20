@@ -33,6 +33,9 @@
         input, select {
             border-radius: 4px; /* Скругление углов кнопки */
         }
+        dialog {
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
@@ -55,6 +58,10 @@
         </select>
         <button onclick="Themes()">Применить тему</button>
     </div>
+    <button id="dialogopen">Настройки</button>
+    <dialog>
+        <button id="dialogclose">Закрыть окно</button>
+    </dialog>
     </center>
     <script>
         let SSelect = document.querySelector("[name='sselect']");
@@ -70,8 +77,14 @@
                 document.getElementById("sbutton").click();
             }
         });
+        var dialog = document.querySelector('dialog')
+        document.querySelector('#dialogopen').onclick = function () {
+            dialog.show()
+        }
+        document.querySelector('#dialogclose').onclick = function () {
+            dialog.close() 
+        }
 
-        
         function SaveSelectValue(el) {
             localStorage.setItem(el.name, el.value);
         }
