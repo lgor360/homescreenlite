@@ -89,13 +89,13 @@
             console.log("перенаправляю...");
         }
         function LoadThemes(color) {
-            var cssLink = document.createElement('link');
-            cssLink.rel = 'stylesheet';
-            let tLink = '/homescreenlite/' + color;
-            cssLink.href = tLink;
-            cssLink.type = "text/css";
-            alert(tLink);
-            document.head.appendChild(link);
+            var link = document.createElement( "link" );
+            link.href = '/homescreenlite/' + color;
+            link.type = "text/css";
+            link.rel = "stylesheet";
+            link.media = "screen,print";
+
+            document.getElementsByTagName( "head" )[0].appendChild( link );
         }
         function Themes() {
             var NT = document.getElementById("themes").value;
