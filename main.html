@@ -73,11 +73,11 @@
             return localStorage.getItem(el.name);
         }
         function Search() {
-            NSS = document.getElementById("searchselect").value;
+            var NSS = document.getElementById("searchselect").value;
             alert(NSS);
-            if ((NSS.value = bing)) var SSystem = 'https://www.bing.com/search?q=';
-            if ((NSS.value = ya)) var SSystem = 'https://yandex.ru/search/?text=';
-            if ((NSS.value = ddg)) var SSystem = 'https://duckduckgo.com/?q=';
+            if ((NSS.value == bing)) var SSystem = 'https://www.bing.com/search?q=';
+            if ((NSS.value == ya)) var SSystem = 'https://yandex.ru/search/?text=';
+            if ((NSS.value == ddg)) var SSystem = 'https://duckduckgo.com/?q=';
             
             var sInput = document.getElementById("sinput");
             console.log("я вытащил поле");
