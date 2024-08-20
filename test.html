@@ -33,9 +33,9 @@
     </div>
     <script>
         function Search() {
-            NSS = document.getElementById("test").value;
-            if ((NSS.value == optionid)) alert('ты выбрал первый пункт');
-            else if ((NSS.value == optionidanother)) alert('ты выбрал второй пункт');
+            var NSS = document.getElementById("test").value;
+            if (NSS === "optionid") alert('ты выбрал первый пункт');
+            else if (NSS === "optionidanother") alert('ты выбрал второй пункт');
         }
     </script>
 </body>
