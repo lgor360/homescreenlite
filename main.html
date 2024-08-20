@@ -66,6 +66,7 @@
         SSelect.value = LoadSelectValue(SSelect);
         let TSelect = document.querySelector("[name='tselect']");
         TSelect.value = LoadSelectValue(TSelect);
+        Themes()
         
         function SaveSelectValue(el) {
             localStorage.setItem(el.name, el.value);
