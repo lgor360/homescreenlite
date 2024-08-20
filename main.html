@@ -57,7 +57,7 @@
     <dialog>
         <font>Настройки</font>
         <hr>
-        <font>Поисковая система.</font>
+        <font>Search engine.</font>
         <select name="sselect" id="searchselect" onchange="SaveSelectValue(this)">
             <option value="google">Google</option>
             <option value="bing">Bing</option>
@@ -102,7 +102,7 @@
             else if (NSS === "bing") var SSystem = 'https://www.bing.com/search?q=';
             else if (NSS === "ya") var SSystem = 'https://yandex.ru/search/?text=';
             else if (NSS === "ddg") var SSystem = 'https://duckduckgo.com/?q=';
-            else console.log(NSS);
+            else document.getElementById("dialogopen").click();
             
             var sInput = document.getElementById("sinput").value;
             console.log("я вытащил поле");
