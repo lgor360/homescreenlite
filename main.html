@@ -73,8 +73,22 @@
             return localStorage.getItem(el.name);
         }
         function Search() {
+            var e = document.getElementById("sselect");
+            var nss = e.value;
+            if (nss = google) {
+                var ssystem = "https://www.google.com/search?q="
+            }
+            if (nss = bing) {
+                var ssystem = "https://www.bing.com/search?q="
+            }
+            if (nss = ya) {
+                var ssystem = "https://duckduckgo.com/?q="
+            }
+            if (nss = ddg) {
+                var ssystem = "https://www.google.com/search?q="
+            }
             const sImput = mm.value;
-            let sNeed = 'https://yandex.ru/search/?text=' + sImput;
+            let sNeed = ssystem + sImput;
             location.href = sNeed;
         }
     </script>
