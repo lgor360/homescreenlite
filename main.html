@@ -39,9 +39,16 @@
             font-size: 20px;
             z-index: 10;
         }
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-content: center;
+        }
     </style>
 </head>
 <body>
+<div class="container">
     <dialog>
         <font>Настройки</font>
         <hr>
@@ -67,6 +74,7 @@
         <button id="sbutton" onclick="SearchEngine()">→</button>
     </div>
     <button id="dialogopen">Настройки</button>
+</div>
     <script>
         let SSelect = document.querySelector("[name='sselect']");
         SSelect.value = LoadSelectValue(SSelect);
