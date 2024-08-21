@@ -36,17 +36,11 @@
         dialog {
             border-radius: 4px;
             font-size: 20px;
+            z-index: 10;
         }
     </style>
 </head>
 <body>
-<center>
-    <font id="texticon">homescreenlite ᗢ</font>
-    <div class="search">
-        <input placeholder="search" type="text" id="sinput">
-        <button id="sbutton" onclick="SearchEngine()">→</button>
-    </div>
-    <button id="dialogopen">Настройки</button>
     <dialog>
         <font>Настройки</font>
         <hr>
@@ -66,7 +60,12 @@
         <hr>
         <button id="dialogclose">Закрыть и сохранить</button>
     </dialog>
-    </center>
+    <font id="texticon">homescreenlite ᗢ</font>
+    <div class="search">
+        <input placeholder="search" type="text" id="sinput">
+        <button id="sbutton" onclick="SearchEngine()">→</button>
+    </div>
+    <button id="dialogopen">Настройки</button>
     <script>
         let SSelect = document.querySelector("[name='sselect']");
         SSelect.value = LoadSelectValue(SSelect);
