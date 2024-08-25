@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="/homescreenlite/detect.js"></script>
     <title>homescreenlite</title>
     <style>
         body {
@@ -68,7 +69,6 @@
     </div>
     <button id="dialogopen">Настройки</button>
     <script>
-        if (navigator.platform === "New Nintendo 3DS") alert('у меня грустная новость... вы не можете посмотреть этот сайт т. к. окно вашего браузера слишком маленькое... нажмите ок чтобы закрыть страницу :(');
         let SSelect = document.querySelector("[name='sselect']");
         SSelect.value = LoadSelectValue(SSelect);
         let TSelect = document.querySelector("[name='tselect']");
