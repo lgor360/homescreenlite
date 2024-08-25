@@ -68,6 +68,7 @@
     </div>
     <button id="dialogopen">Настройки</button>
     <script>
+        window.addEventListener('resize', checkMediaQuery);
         let SSelect = document.querySelector("[name='sselect']");
         SSelect.value = LoadSelectValue(SSelect);
         let TSelect = document.querySelector("[name='tselect']");
@@ -136,6 +137,11 @@
             if (NT === "red") LoadThemes("red.css");
             else if (NT === "orange") LoadThemes("orange.css");
             else console.log(NT);
+        }
+        function checkMediaQuery() {
+            if (window.innerWidth < 500) {
+                alert('у меня грустная новость... вы не можете посмотреть этот сайт т. к. окно вашего браузера слишком маленькое... нажмите ок чтобы закрыть страницу :(');
+            }
         }
     </script>
 </body>
